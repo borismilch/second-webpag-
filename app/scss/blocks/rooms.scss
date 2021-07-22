@@ -1,0 +1,280 @@
+.rooms-arrows{
+      top: 45%;
+      right: 1%;
+      width: 50px;
+      z-index: 200;
+      left: auto;
+}
+.arr-right2{
+      background-color: white;
+      color: $second;
+    
+      
+}
+.pagination2{
+      z-index: 1000;
+      bottom: 15%;
+      margin:2% 0px;
+      right: 20%;
+      left: auto !important;
+      top: auto;
+      @media (max-width:1176px) {
+            right: 10%;
+      }
+      @media (max-width:990px) {
+            right: 30%;
+      }
+      @media (max-width:740px) {
+            right: 40%;
+            bottom: 0% !important;
+            
+      }
+}
+.rooms {
+    background-color: #FFF2E4;
+    position: relative;
+		// .rooms__wrapper
+
+		&__wrapper {
+            display: flex;
+            padding: 3.4% 0px;
+            @media (max-width:720px) {
+                  display: block;
+            }
+		}
+            .container{
+                  padding: 0px;
+               
+            }
+}
+.rooms-hint {
+    z-index: 100;
+    background-color: #FFF2E4;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0  0 39%;
+    padding-left: 2.4%;
+    padding-right: 1.5%;
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      color: #FFF2E4;
+      height: 100%;
+      width: 18%;
+       left: 0; 
+      overflow: hidden;
+      z-index: -1;
+      background-color: #FFF2E4;
+      display: flex;
+     
+     
+      padding-left: 2.4%;
+      padding-right: 1.5%;
+    }
+		// .rooms-hint__text
+     
+		&__text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            @media (max-width:720px) {
+                  text-align: center;
+                 
+                  
+            }
+		}
+
+		// .rooms-hint__title
+
+		&__title {
+            @include adaptiv-font(40,25);
+            color: $black;
+            font-family: $Gilroy-b;
+            line-height: 120%;
+            margin: 7px 0px
+		}
+
+		// .rooms-hint__subtitle
+
+		&__subtitle {
+            @include adaptiv-font(16,14);
+            color: $gray;
+            font-family: $Gilroy;
+            line-height: 150%;
+            padding-bottom: 10px;
+            
+		}
+
+		// .rooms-hint__btn
+
+		&__btn {
+            margin: 22px 0px;
+            white-space: nowrap;
+            color: white;
+            padding: 11.5px 40px;
+            background-color: #E08E5B;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            
+            width: 176px;
+            font-family: $Gilroy-b;
+            &:hover{
+                color: #E08E5B; 
+                background: white;
+            }
+            @media (max-width:720px) {
+                  display: none;
+            }
+		}
+            &__btn2{
+            margin: 22px 0px;
+            white-space: nowrap;
+            color: white;
+            padding: 11.5px 40px;
+            background-color: #E08E5B;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            
+            width: 100%;
+            font-family: $Gilroy-b;
+            &:hover{
+                color: #E08E5B; 
+                background: white;
+            }
+                  @media (min-width:720px) {
+                      display: none;
+            }
+}}
+
+.rooms-slider {
+      overflow: visible;
+		// .rooms-slider__wrapper
+
+		&__wrapper {
+                 
+                  overflow-x: visible;
+		}
+
+		// .rooms-slider__slide
+
+		&__slide {
+            max-width: 372px;
+            min-width: 280px;
+            position: relative;
+            overflow: hidden;
+            min-height: 585px; 
+            display: flex;
+            flex-direction: column;     
+                  
+		}
+
+		// .rooms-slider__img
+
+		&__img{
+                  position: relative;
+              & img{
+                    transition: all 0.6s ease;
+                    transition-delay: 0.6s;
+                  height: 100%;
+                  width: 100%;
+                  
+		}}
+
+		// .rooms-slider__hint
+
+		&__hint {
+            transform: translateY(70px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s ease;
+            transition-delay: 0.6s;
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 4%;
+            left: 5%;
+            &.active{
+                  opacity: 1;
+                  visibility: visible;
+                  transform: translateY(0px);
+            }
+		}
+}
+
+.swiper-slide {
+      .rooms-slider__img{
+         
+        & img{
+            height: 84%;
+ 
+      }}
+}
+.swiper-slide-duplicate-active{
+      .rooms-slider__img{
+         
+            & img{
+                height: 100%;
+     
+          }}     
+}
+.rooms-slider-window {
+  
+    
+		// .rooms-slider-window__text
+
+		&__text {
+            background-color: rgba(255 ,255 ,255, 0.72);
+            display: flex;
+            flex-direction: column;
+            padding: 29px 45px 30px 32px;
+            text-align: left;
+            
+		}
+
+        &__subtitle{
+            color: #616161;
+            font-size: 16px;
+            font-family: $Gilroy;
+            line-height: 150%;
+        }
+		// .rooms-slider-window__title
+
+		&__title {
+            color: $black;
+            @include adaptiv-font(28 ,22);
+            font-family: $Gilroy-b;
+            line-height: 120%;
+		}
+
+		// .rooms-slider-window__arrow
+
+		&__arrow {
+            width: 48px;
+            height: 46px;
+            transition:  all 0.3s ease;
+            border: 0;
+            background-color: $second;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+         
+            & img{
+                width: 22px;
+                height: 16.5px;
+
+            }
+            &:hover{
+                color: #E08E5B; 
+                background: $black;
+               
+            }
+		}
+
+}

@@ -1,0 +1,6 @@
+/node_modules
+/app/images
+/app/fonts
+copy.html
+package-lock.json
+package.json

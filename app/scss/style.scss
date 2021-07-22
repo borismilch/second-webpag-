@@ -1,0 +1,65 @@
+
+a{
+  text-decoration: none;
+}
+$mv : 1270px;
+$mv1: 760px;
+$mv2: 580px;
+$mv3: 100%;
+$maxW : 1400;
+  
+   textarea:focus, input:focus{
+     outline: none;
+   }
+   
+   *,
+    *::before,
+    *::after{
+        box-sizing:  border-box;
+    }
+    @import "vars.scss";
+@import "tools.scss";      
+@import "mixins.scss";
+
+@import "fonts.scss";
+@import "icons.scss"; 
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+@import "blocks/popup.scss";
+@import "blocks/avatar.scss";
+@import "blocks/main-slider.scss";
+@import "blocks/advantages.scss";
+@import "blocks/produckts.scss";
+@import "blocks/rooms.scss";
+@import "blocks/tips.scss";
+@import "blocks/furniture.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body{
+  @include adaptiv-font(15, 4);
+  margin: 0px;
+  background-color: #F9F1E7;
+  overflow-x: hidden;
+}

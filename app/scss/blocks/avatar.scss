@@ -1,0 +1,285 @@
+
+
+
+
+.avatar-hint {
+    position: absolute;
+    display: flex;
+    right: 10%;
+    flex-direction: column;
+    background-color: $second;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 12px;
+    font-family: $Gilroy;
+    transition: 0.3s linear;
+    transition-delay: 0.4s;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    // .avatar-hint__title
+    &.active{
+        opacity: 1;
+    visibility: visible;
+    }
+  
+
+    // .avatar-hint__name
+
+    &__name, &__email {
+        color: #FCF4EA;
+        opacity: 0.75;
+    }
+
+    // .avatar-hint__email
+
+    
+}
+
+
+.account {
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s linear;
+    position: absolute;
+    box-shadow: 0px 0px 6px $second;
+    border-radius: 3%;
+    top: -10%;
+    right: 5%;
+    z-index: 100;
+    background-color: $deco2;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 350px;
+    max-width: 90%;
+    flex-direction: column;
+    &:hover{
+        .avatar-hint{
+            display: none;
+        }
+    }
+    &::-webkit-scrollbar{
+        width: 7px;
+        background-color: $main;
+        border-radius: 15px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: $second;
+    }
+    &.active{
+        top: 90px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.account-body {
+    
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed $gray;
+        
+        align-items: center;
+
+		// .account-body__avatar
+
+		&__avatar img{
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            position: relative;
+		}
+
+		// .account-body__icon
+
+		&__icon {
+            top: 10%;
+            left: 54%;
+            z-index: 2;
+            position: absolute;
+            width: 30px;
+            background-color: white;
+            height: 30px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 3px $black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+               background-color: $deco;
+  
+              }
+		}
+        &__icon img{
+            border-radius: 0;
+         
+            z-index: 2;
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+            transition-duration: 0.2s;
+            opacity: 0.9;
+            &:hover{
+              opacity: 1;
+              transform: scale(1.15)
+
+            }
+		}
+		// .account-body__name
+
+		&__name {
+            @include adaptiv-font(16, 14);
+            font-family:$Gilroy-b;
+            margin: 2px 0px; 
+		}
+
+		// .account-body__email
+
+		&__email {
+            @include adaptiv-font(14, 14);
+            font-family: $Gilroy;
+            opacity: 0.9;
+            margin: 2px 0px; 
+		}
+
+		// .account-body__href
+
+		&__href {
+            @include adaptiv-font(14, 12);
+            color: rgb(32, 27, 27);
+            text-decoration: none;
+            transition-duration: 0.1s;
+            padding: 8px 16px;
+            border: 1px solid $gray;
+            max-width: 230px;
+            border-radius: 20px;
+            margin: 8px 0px; 
+            &:hover{
+                background-color: $second;
+                color: white;
+            }
+		}
+}
+.account-items {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.account-item {
+    padding: 12px 38px;
+
+    display: flex;
+    transition: 0.2s ease;
+    & img{
+        margin-right: 5px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+    &:hover{
+        background-color: $second;
+        color: white;
+        .account-item__title,.account-item__subtitle{
+            color: white;
+        }
+    }
+		// .account-item__text
+
+		&__text {
+            display: flex;
+            flex-direction: column;
+            line-height: 100%;
+            transition: 0.2s linear;
+            text-align: start;
+		}
+
+		// account-item.__title
+
+		&__title {
+            font-size: 14px;
+            font-family: $Gilroy-b;
+            color: #202124;
+        
+		}
+
+		// .account-item__subtitle
+
+		&__subtitle {
+            font-size: 12px;
+            font-family: $Gilroy;
+            color: #5f6368;
+		}
+
+		// .account-item__leave
+
+		&__leave {
+            width: 100%;
+            padding: 14px 33px;
+            border-bottom: 1px solid $gray;
+            border-top: 1px solid $gray;
+            display: flex;
+            justify-content: center;
+		}
+        &__leave a {
+            border-radius: 4px;
+            @include adaptiv-font(15, 12);
+            white-space: nowrap;
+            color: $gray;
+            text-decoration: none;
+          padding: 10px 24px;
+          border: 1px solid $gray;
+          transition-duration: 0.2s;
+          &:hover{
+            background-color: $second;
+            color: white;
+        }
+		}
+}
+.account-add {
+    font-size: 16px;
+    color: #202124;
+    display: flex;
+    transition-duration: 0.2s;
+    font-family: $Gilroy-b;
+    padding: 14px 38px;
+    align-items: center;
+    
+    &:hover{
+        background-color: $second;
+        color: white;
+    }
+}
+
+
+.account-add img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    &:hover{
+       
+        color: white;
+    }
+}
+.account-politics {
+    width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 10px 0px;
+}
+.account-politics a{
+font-size: 12px;
+transition-duration: 0.2s;
+padding: 2px;
+color: #5f6368;
+text-decoration: none;
+&:hover{
+background-color: $second;
+color: white;
+}
+}

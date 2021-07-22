@@ -1,0 +1,83 @@
+.footer {
+ width: 100%;
+ background-color: $deco2;
+ display: flex;
+position: relative;
+bottom: 1px;
+
+z-index: 1;
+left: 0;
+ padding: 35px 0px 25px 0px;
+ flex-direction: column;
+    // .footer__content
+
+    &__content {
+        flex-wrap: wrap;
+        width: 80vw;
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: space-between;
+    }
+}
+
+.footer-item {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    max-width: 240px;
+    min-width: 200px;
+
+    // .footer-item__title
+
+    &__title {
+        @include adaptiv-font(22, 20);
+        font-family: $Gilroy-b;
+        opacity: 0.8;
+    }
+    
+    &__form {
+        margin: 20px 0px;
+    }
+
+    // .footer-item__btn
+
+    &__btn {
+        background-color: $second;
+        border: 0;
+        padding: 10px;
+    }
+
+    &__input{
+        text-align: center;
+        padding: 8px 29px 8px 0px;
+        border: 1px solid $second;
+        border-radius: 6px;
+        background-color: #F4F5F7;
+        border-right: 0;
+    }
+}
+.footer-item p{
+  color: #616161;
+  font-family: $Gilroy;
+  @include adaptiv-font(14, 13);
+  margin: 0.8em 0px;
+  transition: 0.1s linear;
+  &:hover{
+      text-decoration: underline;
+      color: $second;
+      cursor: pointer;
+  }
+}
+.icon-location,.icon-phone {
+   margin: 10px;
+   
+}
+.icon-phone {
+}
+
+.icon-send {
+    transition-duration: 0.2s;
+    &:hover{
+       transform: scale(1.1);
+    }
+}

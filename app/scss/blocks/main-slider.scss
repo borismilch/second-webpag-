@@ -1,0 +1,274 @@
+
+
+
+.main-slider {
+	margin-top: 7%;
+		// .main-slider__wrapper
+
+		&__wrapper {
+			padding: 70px 0px;
+			display: flex;
+			overflow:visible !important;
+		}
+}
+
+.main-slide {
+	position: relative;
+	display: flex;
+	left: 10%;
+	margin: 0px 25px ;
+	
+		// .main-slide__img
+
+		&__img img{
+			max-width:100%;
+			position: relative;
+		}
+}
+.main-shint {
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.6s ease;
+	transition-delay: 1.2s;
+	position: absolute;
+	z-index: 10;
+	top: -13%;
+	left: -15%;
+	display: flex;
+	width: 448px;
+	flex-direction: column;
+	flex: 0 0  494/1240*100%;
+	background-color: rgba(255, 255, 255, 0.786);
+	padding: 3.4rem 3.3rem;
+	@media (max-width:990px) {
+		width: 348px;
+		padding: 1.6rem 1.5rem;
+		
+	}
+	&.active{
+		opacity: 1;
+		visibility: visible;
+	}	
+
+		// .main-shint__title
+
+		&__title {
+			@include adaptiv-font(45, 25);
+			font-family: $Gilroy-b;
+			margin-top: 0px;
+			
+
+		}
+
+		// .main-shint__text
+
+		&__text {
+			line-height: 130%;
+			@include adaptiv-font(20, 16);
+			font-family: $Gilroy;
+			color: #898989;
+			padding: 2em 0px;
+			@media (max-width:990px){
+				padding: 1em 0px;
+			}
+		}
+
+		// .main-shint__btn
+
+		&__btn {
+			display: flex;
+			font-family: $Gilroy;
+			align-items: center;
+			justify-content: center;
+			background-color: $second;
+			color: white;
+			@include adaptiv-font(18, 14);
+			padding: 1.4em 10px;
+			align-self: center;
+			width: 100%;
+			flex: 1 1 auto;
+			transition: 0.3s ease;
+			text-decoration: none;
+		
+			&:hover{
+				background-color: rgba(133, 47, 47, 0.877);
+			}
+			& a{
+				text-decoration: none;
+				color: white;
+				font-family: $Gilroy;
+			}
+		}
+}
+.main-s2hint {
+	opacity: 0;
+	transition: 0.6s;
+	visibility: hidden;
+	transition-delay: 1.2s;
+ background-color: rgba(255, 255, 255, 0.726);
+ display: flex;
+ flex-direction: column;
+ text-align: left;
+ position: absolute;
+ bottom: 4%;
+ right: 4%;
+ padding: 4% 12% 4% 4%;
+ &.active{
+	opacity: 1;
+	visibility: visible;
+}	
+
+
+		// .main-s2hint__title
+
+		&__title {
+			color: $black;
+			@include adaptiv-font(28, 20);
+			font-family: $Gilroy-b;
+		
+
+
+		}
+
+		// .main-s2hint__text
+
+		&__text {
+			color: #616161;
+			@include adaptiv-font(15,12);
+			margin: 0.8em 0px;
+			font-family: $Gilroy;
+
+		}
+
+		// .main-s2hint__sub
+
+		&__sub {
+			display: flex;
+			justify-content: space-between;
+			margin: 0px 3px;
+			align-items: center;
+			font-family: $Gilroy-b;
+		}
+
+		// .main-s2hint__price
+
+		&__price {
+			@include adaptiv-font(20, 17);
+			color: $black;
+		}
+
+		// .main-s2hint__arrow
+
+		&__arrow img{
+			width: 23.74px*0.95;
+            height: 24.68px*0.95;
+			position: absolute;
+			right: 10%;
+			bottom: 15%;
+			transition: 0.2s ease;
+			color: $black;
+			opacity: 0.6;
+			&:hover{
+				opacity: 1;
+				color: $second;
+				width: 23.74px;
+				height: 24.68px;
+			}
+		}
+}
+.main-arrows {
+	position: absolute;
+	width: 110px;
+	right: 10%;
+	z-index: 10;
+ top: 0%;
+    display: flex;
+    justify-content: space-between;
+	// .main-arrows__left
+
+	&__left {
+		background-color: white;
+	}
+	&__left img{
+		
+		width: 21.74px;
+        height: 22.68px;
+	}
+	// .main-arrows__right
+
+	&__right img{
+		color: white;
+		width: 21.74px;
+        height: 22.68px;
+	}
+	&__right {
+		background-color: $second;
+	}
+	&__right,&__left {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		transition: 0.2s ease;
+		opacity: 0.75;
+		justify-content: center;
+		&:hover{
+			opacity: 1;
+		}
+	}
+	&__right img,&__left img{
+		transition: 0.2s ease;
+	&:hover{
+		width: 26.74px;
+        height: 27.68px;
+	}
+		
+	}
+}
+.btnor{
+	margin-top: 15px;
+	display: none;
+	text-align: center;
+}
+.main-sliders{
+	overflow: visible !important;
+}
+@media (max-width:990px) {
+	.main-slide {
+		left: 0px;
+		margin: 0px;
+	}
+	.main-shint {
+		left: 0px;
+		margin: 0px;
+	}}
+	@media (max-width:990px){
+
+		.main-slide {display: block;}
+		.main-shint {
+			
+			position: relative;
+			text-align: center;
+			display: block;
+			width: 100%;
+			padding: 20px 5px;
+		}
+		.main-shint__title{
+			white-space:inherit;
+		}
+		.main-shint__btn{
+			display: none;
+		}
+		.main-s2hint{
+			bottom: 14%;
+		}
+		.btnor{
+			display: block;
+		}
+		.main-arrows {
+			top: 55%;
+			width: 100%;
+			left: 0;
+		}
+	}

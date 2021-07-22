@@ -1,0 +1,52 @@
+{
+    "products":[
+        {
+            "id": 5,
+            "url" : "#",
+            "title" : "Ломпаш",
+            "labels" : "-10%",
+            "labelsColor" : "#2EC1AC",
+            "image" :"05.jpg",
+            "price" : "1.500.000",
+            "priceOld" : "1.000.000",
+            "shareUrl" : "",
+            "likeUrl": ""
+        },
+        {
+            "id": 6,
+            "url" : "#",
+            "title" : "Філіжанка",
+            "labels" : "New",
+            "labelsColor" : "#E97171",
+            "image" :"06.jpg",
+            "price" : "1.900.000",
+            "priceOld" : "1.400.000",
+            "shareUrl" : "",
+            "likeUrl": ""
+        },
+        {
+            "id": 7,
+            "url" : "#",
+            "title" : "Лежанка",
+            "labels" : "-30%",
+            "labelsColor" : "#E89F71",
+            "image" :"07.jpg",
+            "price" : "2.900.000",
+            "priceOld" : "2.400.000",
+            "shareUrl" : "",
+            "likeUrl": ""
+        },
+        {
+            "id": 8,
+            "url" : "#",
+            "title" : "Буряни",
+            "labels" : "-20%",
+            "labelsColor" : "#E97171",
+            "image" :"08.jpg",
+            "price" : "3.900.000",
+            "priceOld" : "4.400.000",
+            "shareUrl" : "",
+            "likeUrl": ""
+        }
+    ]
+}

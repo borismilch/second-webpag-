@@ -1,0 +1,235 @@
+.btn-w{
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 12px 38px;
+  text-align: center;
+  
+  &:hover{
+      background-color: $second;
+      & a, span{
+      color: white;
+  }}
+}
+
+._flyImage{
+    position: absolute;
+opacity: 1;
+visibility: visible;
+transition: all 1s ease;
+z-index: 100;
+}
+.products-content__btn{
+    padding: 14px 62px;
+    border: 2px solid $second;
+
+    margin: 3% 0px;
+    width: auto;
+    text-decoration: none;
+    font-size: 20px;
+    color: $second;
+     
+  &:hover{
+    color: white;
+}}
+
+
+.mobile-btn{
+    display: none;
+    @media (any-hover:none) {
+        display: block;
+    }
+}
+.products {
+    padding: 4em 0px;
+    background-color: white;
+    // .products__wrapper
+
+    &__wrapper {
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    // .products__title
+
+    &__title {
+        @include adaptiv-font(40, 25);
+        color: $black;
+        line-height: 120%;
+        font-family: $Gilroy-b;
+
+    }
+
+    // .products__content
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+}
+.products-item-layer {
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #7a7171b2;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    // .products-item-layer__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 220px;
+        align-items: center;
+    }
+
+    // .products-item-layer__btn
+
+    &__btn {
+        margin: 20px 0px;
+    }
+    &__btn a{
+        transition: inherit;
+        font-family: $Gilroy-b;
+        color: $second;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    // .products-item-layer__links
+
+    &__links {
+        transition: 0.3s ease;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        cursor: pointer;
+        width: 90%;
+        font-size: 16px;
+        
+    }
+}
+.aa1 {
+    transition: 0.3s ease;
+    & span{
+        margin: 5px;
+    }
+ &:hover{  
+  color: $second;
+}
+
+}
+.products-item {
+    margin: 15px 10px;
+    display: flex;
+    
+    flex-direction: column;
+    position: relative;
+    flex: 1 1  auto;
+    //.products-item__img
+ @media (any-hover:hover){
+    &:hover{
+        .products-item-layer{
+            opacity: 1;
+            visibility: visible;
+        }
+    }}
+    &__img img {
+        height: 100%;
+        width: 100%
+    }
+
+
+    // .products-item__text
+    
+    &__text {
+        @include adaptiv-font(16, 14);
+        padding:  1em 0.5em;
+        
+        background-color:  #F5F6FC;
+        
+
+    }
+
+    // .products-item__title
+
+    &__title {
+        @include adaptiv-font(24, 22);
+        color: $black;
+        font-family: $Gilroy-b;
+
+    }
+
+    // .products-item__subtitle
+
+    &__subtitle {
+        @include adaptiv-font(16, 15);
+        color: $gray;
+        font-family: $Gilroy;
+        padding: 0.5em 0px;
+
+    }
+
+    // .products-item__sell
+
+    &__sell {
+        transition: 0.2s ease;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        font-family: $Gilroy-b;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba(196, 81, 81, 0.72);
+        &:hover{
+            background-color: rgb(196, 81, 81);
+        }
+        & span{
+            color: white;
+        }
+    }
+}
+.products-item-cost {
+ display: flex;
+ justify-content: space-between;
+
+    // .products-item-cost__now
+
+    &__now {
+        @include adaptiv-font(22, 20);
+        color: $black;
+        font-family: $Gilroy-b;
+    }
+
+    // .products-item-cost__before
+
+    &__before {
+        @include adaptiv-font(16, 15);
+        color: $gray;
+        font-family: $Gilroy;
+        padding: 0.5em 0px;
+        text-decoration: line-through;
+    }
+}
+
+
